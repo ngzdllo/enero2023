@@ -1,3 +1,5 @@
+import {registrarMedico} from "../../services/registrarMedico.js"
+
 export function validarFormulario(datos){
 
     //Referencias a etiquetas que quiero validar
@@ -37,6 +39,7 @@ if(nombresMedico=="" && documentoMedico==""){
         text: 'El documento es obligatorio',        
       })
 }else{
+    registrarMedico(datos)
     etiquetaNombre.classList.remove("is-invalid")
     etiquetaDocumento.classList.remove("is.invalid")
 }

@@ -4,10 +4,13 @@ export async function registrarMedico(medico){
 
     let petición={
         method:"POST",
+        headers: {"Content-Type":"application/json"},
         body:JSON.stringify(medico)
     }
 
     let respuesta=await fetch(url,petición)
     let respuestaOK=await respuesta.json()
+
+    console.log(respuestaOK)
 
 }
